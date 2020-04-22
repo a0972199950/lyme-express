@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon index.ts",
     "start": "cross-env NODE_ENV=production ts-node index.ts",
+    "deploy": "pm2 delete lyme-express && pm2 start npm --name 'lyme-express' -- start",
     "vapid": "web-push generate-vapid-keys"
   },
   "dependencies": {

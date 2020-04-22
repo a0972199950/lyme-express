@@ -6,6 +6,9 @@ import cors from './util/Cors'
 import socketHelper from './util/SocketHelper'
 import webpushHelper from './util/WebpushHelper'
 
+const host: string = config.get('host')
+const port: number = config.get('port')
+
 const app = express()
 const server = http.createServer(app)
 
@@ -16,8 +19,10 @@ app.use(router)
 webpushHelper.init()
 socketHelper.init(server)
 
-server.listen(8000, () => {
-  console.log('Server up to running')
-})
 
 console.log('frontendDomain: ', config.get('frontendDomain'))
+
+server.listen(port, host, () => {
+  console.log(`Server up to running at ${host}:${port}`)
+})
+
