@@ -85,8 +85,8 @@ class SocketController {
 
         const pushPayload = {
           type: 'BROADCAST_MSG',
-          title: '新訊息',
-          body: msgDocument.format === 'TEXT' ? msgDocument.msg : null,
+          title: `${msgDocument.username}:`,
+          body: msgDocument.format === 'TEXT' ? msgDocument.msg : '',
           image: msgDocument.format === 'IMAGE' ? msgDocument.msg : null,
           url: '/'
         }

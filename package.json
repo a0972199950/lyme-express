@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon index.ts",
+    "start": "cross-env NODE_ENV=production ts-node index.ts",
     "vapid": "web-push generate-vapid-keys"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "@types/web-push": "^3.3.0",
     "config": "^3.3.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "firebase": "^7.14.0",
     "multer": "^1.4.2",

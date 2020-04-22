@@ -3,7 +3,7 @@ import cors from 'cors'
 
 class Cors {
   private opts = {
-    origin: config.get<string>('frontEndDomain')
+    origin: config.get<string>('frontendDomain')
   }
 
   init() {
