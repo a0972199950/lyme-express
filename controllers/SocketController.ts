@@ -5,6 +5,7 @@ import webpushHelper from '../util/WebpushHelper'
 interface IMsgPayload {
   msg: string
   username: string
+  userAvatar: string
   format: 'TEXT' | 'IMAGE'
 }
 
@@ -37,16 +38,6 @@ class SocketController {
           log: e
         })
       }
-    }
-  }
-
-  public ferret(sid: string) {
-    return (name: string, desc: string, fn: (data: any) => void) => {
-      console.log('sid: ', sid)
-      console.log('name: ', name)
-      console.log('fn: ', fn)
-      console.log('desc: ', desc)
-      fn('woot')
     }
   }
 

@@ -46,8 +46,6 @@ class SocketHelper {
     socketController.connect(socket)
 
     socket.on('disconnect', socketController.disconnect(socket))
-    
-    socket.on('ferret', socketController.ferret(socket.id))
 
     socket.on('new-msg', socketController.newMsg(socket))
   }
