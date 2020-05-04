@@ -79,7 +79,7 @@ class SocketController {
           title: `${msgDocument.username}:`,
           body: msgDocument.format === 'TEXT' ? msgDocument.msg : '',
           image: msgDocument.format === 'IMAGE' ? msgDocument.msg : null,
-          url: '/'
+          url: '/chatroom'
         }
 
         webpushHelper.sendNotification(pushConfig, JSON.stringify(pushPayload))  
