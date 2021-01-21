@@ -23,7 +23,7 @@
     "firebase": "^7.14.0",
     "multer": "^1.4.2",
     "nodemon": "^2.0.3",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3",
     "web-push": "^3.4.3",
